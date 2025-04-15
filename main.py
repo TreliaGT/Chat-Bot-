@@ -7,7 +7,7 @@ load_dotenv()
 
 from actions.regenerate_password import RegeneratePassword
 from actions.basic_actions import TellJoke
-
+from actions.get_weather import GetWeather
 
 # Reads json input.
 class JsonHandler:
@@ -72,8 +72,10 @@ class ChatBot:
             return "Goodbye!"
         for handler in self.handlers:
             if handler.can_handle(user_input):
-                self.last_response = handler.handle(user_input)  
-                return handler.handle(user_input)
+                response = handler.handle(user_input)
+                self.last_response = response
+                return response
+
     
     def get_last_response(self):
         return self.last_response  # Return the last response

@@ -46,6 +46,16 @@
         ],
         "response": "I'm ChatBot, your virtual assistant!"
     },
+    "weather": {
+        "triggers": [
+            "weather",
+            "what's the weather",
+            "weather now",
+            "check weather"
+        ],
+        "response": "Fetching weather...",
+        "action": "GetWeather"
+    },
     "help": {
         "triggers": [
             "help",
