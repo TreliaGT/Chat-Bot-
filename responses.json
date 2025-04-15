@@ -1,0 +1,58 @@
+{
+    "greet": {
+        "triggers": [
+            "hello",
+            "hi",
+            "hey",
+            "yo",
+            "sup",
+            "greetings"
+        ],
+        "response": "Hello! How can I help you today?"
+    },
+    "regenerate_password": {
+        "triggers": [
+            "regenerate password",
+            "generate new password",
+            "reset password"
+        ],
+        "response": "Generating a new password for you.",
+        "action": "RegeneratePassword"
+    },
+    "tell_joke": {
+        "triggers": [
+            "tell me a joke",
+            "I need a joke",
+            "joke",
+            "joke please"
+        ],
+        "response": "Let me tell you joke",
+        "action": "TellJoke"
+    },
+    "how_are_you": {
+        "triggers": [
+            "how are you",
+            "how r u",
+            "how's it going",
+            "how do you do"
+        ],
+        "response": "I'm doing great, thanks! How about you?"
+    },
+    "name": {
+        "triggers": [
+            "what's your name",
+            "who are you",
+            "tell me your name"
+        ],
+        "response": "I'm ChatBot, your virtual assistant!"
+    },
+    "help": {
+        "triggers": [
+            "help",
+            "what can you do",
+            "commands",
+            "show options"
+        ],
+        "response": "I can greet you, tell you my name, answer how I'm doing, and say goodbye!"
+    }
+}
