@@ -8,6 +8,7 @@ load_dotenv()
 from actions.regenerate_password import RegeneratePassword
 from actions.basic_actions import TellJoke
 from actions.get_weather import GetWeather
+from actions.math_solution import MathSolution
 
 # Reads json input.
 class JsonHandler:

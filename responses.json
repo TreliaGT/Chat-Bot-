@@ -56,6 +56,15 @@
         "response": "Fetching weather...",
         "action": "GetWeather"
     },
+    "math": {
+        "triggers": [
+            "math",
+            "need help with math problem",
+            "need help with math"
+        ],
+        "response": "Solving Problem...",
+        "action": "MathSolution"
+    },
     "help": {
         "triggers": [
             "help",
