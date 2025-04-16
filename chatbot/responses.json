@@ -87,6 +87,6 @@
             "commands",
             "show options"
         ],
-        "response": "I can greet you, tell you my name, answer how I'm doing, and say goodbye!"
+        "response": "I can do a lot of things! Here are some examples:\n\n- Greet you and introduce myself\n- Tell you my name\n- Answer how I'm doing\n- Tell you jokes\n- Provide the current time\n- Get weather information\n- Solve math problems\n- Say goodbye\n\nJust type your request, and I'll do my best to assist you!"
     }
 }
