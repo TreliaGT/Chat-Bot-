@@ -3,10 +3,29 @@ import requests
 import os
 
 class GetWeather:
-    def execute(self):
-        city = input("ChatBot: Which city's weather would you like to check? ").strip()
+    def execute(self, user_input=None):
+        if not user_input:
+            return "Please specify a city for the weather lookup."
 
-        # Step 1: Use Nominatim to get lat/lon
+        # Try to extract a city name from the user input
+        words = user_input.lower().split()
+        city_keywords = ["in", "for", "at"]
+        city = None
+
+        for keyword in city_keywords:
+            if keyword in words:
+                idx = words.index(keyword)
+                if idx + 1 < len(words):
+                    city = " ".join(words[idx + 1:])
+                    break
+
+        # fallback: try using last word as city
+        if not city and len(words) >= 1:
+            city = words[-1]
+
+        if not city:
+            return "Sorry, I couldn't understand which city you meant."
+
         geo_url = os.getenv('LAT_LONG_API')
         geo_params = {
             "q": city,
@@ -41,8 +60,11 @@ class GetWeather:
             current = weather_data.get("current_weather", {})
             temp = current.get("temperature")
             wind = current.get("windspeed")
-            desc = f"{temp}°C with wind speed of {wind} km/h"
 
+            if temp is None or wind is None:
+                return f"Couldn't retrieve current weather for {city.title()}."
+
+            desc = f"{temp}°C with wind speed of {wind} km/h"
             return f"The current weather in {city.title()} is {desc}."
 
         except Exception as e:

@@ -14,7 +14,8 @@
         "triggers": [
             "regenerate password",
             "generate new password",
-            "reset password"
+            "reset password",
+            "password"
         ],
         "response": "Generating a new password for you.",
         "action": "RegeneratePassword"
@@ -23,6 +24,7 @@
         "triggers": [
             "tell me a joke",
             "I need a joke",
+            "tell joke",
             "joke",
             "joke please"
         ],
@@ -48,22 +50,35 @@
     },
     "weather": {
         "triggers": [
-            "weather",
-            "what's the weather",
-            "weather now",
-            "check weather"
+            "weather in .*",
+            "what's the weather.*",
+            "check weather.*",
+            "forecast.*"
         ],
         "response": "Fetching weather...",
         "action": "GetWeather"
     },
     "math": {
         "triggers": [
-            "math",
-            "need help with math problem",
-            "need help with math"
+            "solve .*",
+            "what is .*",
+            ".*\\+.*",
+            ".*\\-.*",
+            ".*\\*.*",
+            ".*\\/.*",
+            ".*=.*"
         ],
-        "response": "Solving Problem...",
+        "response": "Let me calculate that...",
         "action": "MathSolution"
+    },
+    "tell time": {
+        "triggers": [
+            "time",
+            "what time is it",
+            "current time"
+        ],
+        "response": "Sure! Let me check the time.",
+        "action": "TellTime"
     },
     "help": {
         "triggers": [

@@ -11,7 +11,7 @@ class RegeneratePassword:
         password = ''.join(random.choices(string.ascii_letters + string.digits, k=self.password_length))
         return password
 
-    def execute(self):
+    def execute(self , user_input=None):
         """Executes the password regeneration and returns the new password."""
         new_password = self.generate()
         return f"Your new password is: {new_password}"

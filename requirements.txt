@@ -1,3 +1,8 @@
 python-dotenv>=1.0.0,<2.0.0
 requests>=2.25.0,<3.0.0
 sympy>=1.10.0,<2.0.0
+
+
+# Note: tkinter is included by default in Python installations (Windows, macOS, most Linux)
+# On some Linux distributions, you may need to install tkinter with:
+# sudo apt-get install python3-tk
