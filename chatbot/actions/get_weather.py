@@ -2,6 +2,7 @@
 import requests
 import os
 
+#gets the weather information by getting the lat/long of the city inputted then using an weather api to check the weather
 class GetWeather:
     def execute(self, user_input=None):
         if not user_input:

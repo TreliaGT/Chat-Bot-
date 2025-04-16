@@ -16,6 +16,7 @@ class TellJoke():
         punchline	= self.pull_joke()["punchline"]
         return f"{setup} \n {punchline}"
 
+#tells time
 class TellTime:
     def execute(self , user_input=None):
         now = datetime.now()
